@@ -8,20 +8,6 @@ Tabela: VENDA (quantidade de registros: entre 80 e 120 registros)
 ◦ código da loja onde aconteceu a venda
 '''
 min = 234567
-meses = {
-    '1': 'Janeiro',
-    '2': 'Fevereiro',
-    '3': 'Março',
-    '4': 'Abril',
-    '5': 'Maio',
-    '6': 'Junho',
-    '7': 'Julho',
-    '8': 'Agosto',
-    '9': 'Setembro',
-    '10': 'Outubro',
-    '11': 'Novembro',
-    '12': 'Dezembro'
-}
 arq = open("Vendas.csv", 'w')
 csv = []
 cabecalho = 'nota_fiscal, cod_brinquedo, data_venda, qtd_vendida, cod_loja \n'
@@ -32,9 +18,9 @@ for i in range(0, 120):
     cod_brinquedo = randint(1,20)
     aux = randint(1, 12)
     if aux < 10:
-        data_venda = str(randint(1, 30)) + "/" + meses[str(aux)] + "/2019"
+        data_venda = str( aux ) + "/2019"
     else:
-        data_venda = str(randint(1, 30)) + "/" + meses[str(aux)] + "/2018"
+        data_venda = str( aux ) + "/2018"
 
     qtdVendida = randint(1, 10)
     cod_loja = randint(1, 6)
